@@ -32,7 +32,8 @@ const app = {
         this.getProdList();
       }).catch((err) =>{
         console.log(err);
-        alert('無管理權限!');
+        const { message } = err.data
+        alert(`${message}`);
         window.location = './index.html';
       })
     },
